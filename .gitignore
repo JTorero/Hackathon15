@@ -1,3 +1,4 @@
 vautos
 .env
 venv
+__pycache__
