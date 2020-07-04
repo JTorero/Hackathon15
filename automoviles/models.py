@@ -31,10 +31,10 @@ class Marca_Tipo(models.Model):
     id = models.AutoField(primary_key = True)
     marca = models.ForeignKey(Marca, on_delete = models.CASCADE)
     tipo = models.ForeignKey(Tipo, on_delete= models.CASCADE)
-    uno = models.CharField(max_length = 50)
+    
 
     def __str__(self):
-        return self.marca.nombre_marca + ' - ' + self.tipo.nombre_tipo
+        return str(self.marca.nombre_marca) + ' - ' + str(self.tipo.nombre_tipo)
 
 class Modelo(models.Model):
     id = models.AutoField(primary_key = True)
